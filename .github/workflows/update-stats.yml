@@ -1,145 +1,49 @@
-name: Update Stats Badges
+name: Update profile stats
 
 on:
   schedule:
-    - cron: '17 * * * *'  # 每小时的第 17 分钟（错峰避整点高峰；GitHub 调度可能再延迟数分钟）
+    # 每天北京时间 08:17；GitHub 的定时任务可能延迟。
+    - cron: '17 0 * * *'
   workflow_dispatch:
 
 permissions:
   contents: write
 
+concurrency:
+  group: profile-stats
+  cancel-in-progress: false
+
 jobs:
   update:
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.repository.default_branch }}
 
-      - name: Fetch GitHub stats
-        id: stats
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Refresh public GitHub statistics
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PROFILE_OWNER: ${{ github.repository_owner }}
+        run: python scripts/update_stats.py
+
+      - name: Commit changed badges
+        env:
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
         run: |
-          set -e
-
-          # Page 1: 前 100 个 owned non-fork repo（按 stars 降序，确保 high-star 在前）
-          PAGE1=$(gh api graphql -f query='
-            query {
-              user(login: "alchaincyf") {
-                repositories(first: 100, ownerAffiliations: OWNER, isFork: false, orderBy: {field: STARGAZERS, direction: DESC}) {
-                  pageInfo { hasNextPage endCursor }
-                  totalCount
-                  nodes { stargazerCount }
-                }
-                followers { totalCount }
-              }
-            }')
-
-          S1=$(echo "$PAGE1" | jq '[.data.user.repositories.nodes[].stargazerCount] | add // 0')
-          HAS_NEXT=$(echo "$PAGE1" | jq -r '.data.user.repositories.pageInfo.hasNextPage')
-          CURSOR=$(echo "$PAGE1" | jq -r '.data.user.repositories.pageInfo.endCursor')
-          REPOS=$(echo "$PAGE1" | jq -r '.data.user.repositories.totalCount')
-          FOLLOWERS=$(echo "$PAGE1" | jq -r '.data.user.followers.totalCount')
-
-          STARS=$S1
-          if [ "$HAS_NEXT" = "true" ]; then
-            PAGE2=$(gh api graphql -f query="
-              query {
-                user(login: \"alchaincyf\") {
-                  repositories(first: 100, after: \"$CURSOR\", ownerAffiliations: OWNER, isFork: false, orderBy: {field: STARGAZERS, direction: DESC}) {
-                    nodes { stargazerCount }
-                  }
-                }
-              }")
-            S2=$(echo "$PAGE2" | jq '[.data.user.repositories.nodes[].stargazerCount] | add // 0')
-            STARS=$((S1 + S2))
+          set -euo pipefail
+          git add -- README.md
+          if git diff --cached --quiet; then
+            echo "Profile statistics are unchanged."
+            exit 0
           fi
-
-          # 格式化：>= 1000 用 xx.xk，去掉无效 .0
-          fmt() {
-            local n=$1
-            if [ "$n" -ge 1000 ]; then
-              awk -v n=$n 'BEGIN { printf "%.1fk", n/1000 }' | sed 's/\.0k$/k/'
-            else
-              echo "$n"
-            fi
-          }
-
-          STARS_FMT=$(fmt $STARS)
-          FOLLOWERS_FMT=$(fmt $FOLLOWERS)
-
-          # gitstar-ranking 全球名次（抓取失败留空，交给下游保留旧值）
-          GRANK=$(curl -s --max-time 20 -A "Mozilla/5.0" "https://gitstar-ranking.com/alchaincyf" \
-            | sed 's/<[^>]*>/ /g' | tr -s ' \n\t' ' ' \
-            | grep -oiE 'Rank [0-9]+' | head -1 | grep -oE '[0-9]+' || true)
-
-          {
-            echo "stars=$STARS_FMT"
-            echo "followers=$FOLLOWERS_FMT"
-            echo "repos=$REPOS"
-            echo "grank=$GRANK"
-          } >> $GITHUB_OUTPUT
-
-          echo "Stats: stars=$STARS ($STARS_FMT), followers=$FOLLOWERS ($FOLLOWERS_FMT), repos=$REPOS, grank=${GRANK:-未抓到}"
-
-      - name: Update README
-        env:
-          STARS: ${{ steps.stats.outputs.stars }}
-          FOLLOWERS: ${{ steps.stats.outputs.followers }}
-          REPOS: ${{ steps.stats.outputs.repos }}
-          GRANK: ${{ steps.stats.outputs.grank }}
-        run: |
-          python3 <<'PYEOF'
-          import os, re
-          stars = os.environ['STARS']
-          followers = os.environ['FOLLOWERS']
-          repos = os.environ['REPOS']
-          grank = os.environ.get('GRANK', '').strip()
-
-          with open('README.md', 'r', encoding='utf-8') as f:
-              content = f.read()
-
-          new_block = (
-              "<!-- STATS-START -->\n"
-              f"[![Total Stars](https://img.shields.io/badge/Total%20Stars-{stars}-FFD93D?style=flat&logo=github&logoColor=white)](https://github.com/alchaincyf)\n"
-              f"[![Followers](https://img.shields.io/badge/Followers-{followers}-4C8BF5?style=flat&logo=github&logoColor=white)](https://github.com/alchaincyf?tab=followers)\n"
-              f"[![Public Repos](https://img.shields.io/badge/Public%20Repos-{repos}-2EA44F?style=flat&logo=github&logoColor=white)](https://github.com/alchaincyf?tab=repositories)\n"
-              "<!-- STATS-END -->"
-          )
-          content = re.sub(
-              r'<!-- STATS-START -->.*?<!-- STATS-END -->',
-              new_block,
-              content,
-              flags=re.DOTALL,
-          )
-
-          # gitstar 全球名次：抓到才更新徽章，抓不到保留 README 现有数字
-          if not grank:
-              m = re.search(r'Global%20Star%20Rank-%23([0-9]+)-', content)
-              grank = m.group(1) if m else '113'
-          rank_block = (
-              "<!-- RANK-START -->\n"
-              f"[![Global Star Rank](https://img.shields.io/badge/Global%20Star%20Rank-%23{grank}-FF6B6B?style=flat&logo=github&logoColor=white)](https://gitstar-ranking.com/alchaincyf)\n"
-              "<!-- RANK-END -->"
-          )
-          content = re.sub(
-              r'<!-- RANK-START -->.*?<!-- RANK-END -->',
-              rank_block,
-              content,
-              flags=re.DOTALL,
-          )
-
-          with open('README.md', 'w', encoding='utf-8') as f:
-              f.write(content)
-          PYEOF
-
-      - name: Commit and push
-        run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add README.md
-          if git diff --staged --quiet; then
-            echo "No changes to commit."
-          else
-            git commit -m "chore: refresh stats badges"
-            git push
-          fi
+          git commit -m "chore: update profile stats"
+          # 普通 push：如有人同时更新主页，宁可失败，也不覆盖对方的提交。
+          git push origin "HEAD:$DEFAULT_BRANCH"

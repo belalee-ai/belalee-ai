@@ -1,78 +1,112 @@
-<!-- BIRD-STICKER-PROMO-START -->
-<a href="https://birdalbum.com/zh/?utm_source=github&utm_medium=profile&utm_campaign=bird-sticker"><img src="assets/birdalbum-promo.webp" alt="Bird Album：地球上的每一种鸟，一种一张贴纸。birdalbum.com" width="100%"></a>
+<!-- 首页内容在这个文件中维护；使用方法见 MAINTENANCE.md。 -->
+<!-- 可选：重要项目推广区可放在个人横幅之前。 -->
 
-全世界现存的11064种鸟，每种一张白边贴纸，我把整套都开源了，还附上43种语言的鸟名和分布、形态数据。[birdalbum.com](https://birdalbum.com/zh/?utm_source=github&utm_medium=profile&utm_campaign=bird-sticker)是用这套贴纸做的免费鸟类网站：15种语言搜鸟名、看分布，地图上有8171个观鸟点。
+<img src="assets/hero.svg" alt="Belalee：个人横幅待补充" width="100%" />
 
-[🐦 去贴纸仓库点颗Star →](https://github.com/alchaincyf/huashu-bird-sticker) · [逛逛birdalbum.com →](https://birdalbum.com/zh/?utm_source=github&utm_medium=profile&utm_campaign=bird-sticker)
-<!-- BIRD-STICKER-PROMO-END -->
-
-<img src="assets/hero.jpg" alt="花叔：不会写代码，也能做出自己的作品" width="100%" />
-
-我是花叔，一个不会写代码的创造者。从小猫补光灯到开源Skill，我用AI把想法做成产品，也把做过的项目写成教程和橙皮书。
+我是 **Belalee**。个人简介待补充。
 
 <!-- STATS-START -->
-[![Total Stars](https://img.shields.io/badge/Total%20Stars-119.1k-FFD93D?style=flat&logo=github&logoColor=white)](https://github.com/alchaincyf)
-[![Followers](https://img.shields.io/badge/Followers-13.1k-4C8BF5?style=flat&logo=github&logoColor=white)](https://github.com/alchaincyf?tab=followers)
-[![Public Repos](https://img.shields.io/badge/Public%20Repos-68-2EA44F?style=flat&logo=github&logoColor=white)](https://github.com/alchaincyf?tab=repositories)
+[![Total Stars](https://img.shields.io/badge/Total%20Stars-6-FFD93D?style=flat&logo=github&logoColor=white)](https://github.com/belalee-ai)
+[![Followers](https://img.shields.io/badge/Followers-1-4C8BF5?style=flat&logo=github&logoColor=white)](https://github.com/belalee-ai?tab=followers)
+[![Public Repos](https://img.shields.io/badge/Public%20Repos-10-2EA44F?style=flat&logo=github&logoColor=white)](https://github.com/belalee-ai?tab=repositories)
 <!-- STATS-END -->
 
+## 最近在做
 
-## 最近在做：让画动起来
+<img src="assets/latest.svg" alt="近期项目封面待补充" width="100%" />
 
-[![huashu-art-motion：让画动起来](assets/art-motion.jpg)](https://github.com/alchaincyf/huashu-art-motion)
+**近期项目名称待补充**
 
-让Coding Agent把艺术风格写成动画。想先看效果，可以从「花叔闯进超级玛丽」和「Clawd博物馆奇妙夜」开始。
+项目介绍待补充。
 
-[看动画样片](https://github.com/alchaincyf/huashu-art-motion#动画样片) · [开始使用](https://github.com/alchaincyf/huashu-art-motion#里面有什么) · [下载完整成片](https://github.com/alchaincyf/huashu-art-motion/releases/latest)
+<!-- 添加链接示例：[查看项目 →](https://github.com/belalee-ai/你的仓库名) -->
 
 ## 从这里开始
 
-[![女娲.skill：把高手的思维，变成你的工具](assets/nuwa.jpg)](https://github.com/alchaincyf/nuwa-skill)
+<img src="assets/project-01.svg" alt="精选项目 01 封面待补充" width="100%" />
 
-提炼一个人的心智模型、决策方法和表达方式，变成可以反复调用的Skill。 [打开女娲 →](https://github.com/alchaincyf/nuwa-skill)
+**精选项目 01** · 项目介绍与链接待补充。
 
-也可以直接试试：[乔布斯视角](https://github.com/alchaincyf/steve-jobs-skill) · [X运营](https://github.com/alchaincyf/x-mentor-skill)
+<img src="assets/project-02.svg" alt="精选项目 02 封面待补充" width="100%" />
 
-[![Huashu Design：把想法做成作品](assets/design.jpg)](https://github.com/alchaincyf/huashu-design)
+**精选项目 02** · 项目介绍与链接待补充。
 
-用HTML做原型、幻灯片、动画和信息图，从定方向到检查成品。 [打开Design →](https://github.com/alchaincyf/huashu-design)
+<img src="assets/project-03.svg" alt="精选项目 03 封面待补充" width="100%" />
 
-[![FanBox：Coding Agent的驾驶舱](assets/fanbox.jpg)](https://github.com/alchaincyf/fanbox)
+**精选项目 03** · 项目介绍与链接待补充。
 
-把文件、终端和每一次改动放在一起，看清Agent做了什么，随时接手。 [打开FanBox →](https://github.com/alchaincyf/fanbox)
+## 给 Agent 配上工具
 
-## 给Agent配上工具
+<img src="assets/tool-01.svg" alt="工具 01 封面待补充" width="100%" />
 
-[![达尔文.skill：让Skill在实测中进化](assets/darwin.jpg)](https://github.com/alchaincyf/darwin-skill)
+**工具 01** · 工具介绍与链接待补充。
 
-评估、改进、测试，保留有效改动，回滚退步。女娲造Skill，达尔文磨Skill。 [打开达尔文 →](https://github.com/alchaincyf/darwin-skill)
+<img src="assets/tool-02.svg" alt="工具 02 封面待补充" width="100%" />
 
-[![huashu-chrome：让Agent用上你的浏览器](assets/chrome.jpg)](https://github.com/alchaincyf/huashu-chrome)
+**工具 02** · 工具介绍与链接待补充。
 
-使用你自己的Chrome和已有登录态操作网页，把站点经验留下来。 [打开浏览器工具 →](https://github.com/alchaincyf/huashu-chrome)
+<img src="assets/tool-03.svg" alt="工具 03 封面待补充" width="100%" />
 
-[![huashu-mac-use：让Agent操作Mac原生应用](assets/mac-use.jpg)](https://github.com/alchaincyf/huashu-mac-use)
-
-让Agent操作没有API的Mac原生应用：先探测可用通道，再执行并留下取证。 [打开Mac工具 →](https://github.com/alchaincyf/huashu-mac-use)
+**工具 03** · 工具介绍与链接待补充。
 
 ## 边做边学
 
-[![橙皮书：从真实项目里长出来的AI指南](assets/books.jpg)](https://bookai.top)
+<img src="assets/learning.svg" alt="内容与教程封面待补充" width="100%" />
 
-用到哪里，写到哪里。把真实项目里走通的步骤，整理成能跟着动手的指南。
+内容介绍与链接待补充。
 
-[阅读橙皮书](https://bookai.top) · [Claude Code](https://github.com/alchaincyf/claude-code-orange-book) · [Hermes Agent](https://github.com/alchaincyf/hermes-agent-orange-book) · [Obsidian AI](https://github.com/alchaincyf/obsidian-ai-orange-book)
+## 在这些平台找到我
 
-## 一起把想法做出来
+<!-- ACCOUNTS-START -->
+点击平台名称打开主页，或扫描二维码找到我。
 
-<img src="assets/follow.svg" alt="关注花叔：公众号、B站、小红书三个二维码。手机用户可使用下方文字链接。" width="100%" />
+<table>
+  <tr>
+    <td align="center" valign="top" width="50%">
+      <strong><a href="https://www.xiaohongshu.com/user/profile/6a1f9a8b0000000008009003">小红书 · 李贝拉Bela</a></strong><br />
+      <sub>小红书号：belaleeAI</sub><br /><br />
+      <a href="https://www.xiaohongshu.com/user/profile/6a1f9a8b0000000008009003"><img src="assets/accounts/xiaohongshu.jpg" alt="李贝拉Bela的小红书二维码" width="200" /></a>
+    </td>
+    <td align="center" valign="top" width="50%">
+      <strong>公众号 · 李贝拉Bela</strong><br />
+      <sub>微信搜一搜「李贝拉Bela」</sub><br /><br />
+      <img src="assets/accounts/wechat-official-placeholder.svg" alt="公众号二维码待补充" width="200" />
+    </td>
+  </tr>
+  <tr>
+    <td align="center" valign="top">
+      <strong>视频号</strong><br />
+      <sub>账号及二维码待补充</sub><br /><br />
+      <img src="assets/accounts/wechat-channels-placeholder.svg" alt="视频号二维码占位，后续补充" width="200" />
+    </td>
+    <td align="center" valign="top">
+      <strong>微信 · 李贝拉Bela</strong><br />
+      <sub>微信号：belaleeAI</sub><br /><br />
+      <img src="assets/accounts/wechat-placeholder.svg" alt="主微信二维码待补充" width="200" />
+    </td>
+  </tr>
+  <tr>
+    <td align="center" valign="top">
+      <strong><a href="https://x.com/belalee_ai">X · 李贝拉Bela</a></strong><br />
+      <sub>@belalee_ai</sub><br /><br />
+      <a href="https://x.com/belalee_ai"><img src="assets/accounts/x.png" alt="X 主页二维码：belalee_ai" width="200" /></a>
+    </td>
+    <td align="center" valign="top">
+      <strong><a href="https://m.okjike.com/users/FBA3136A-3617-4298-BB69-5F24833BEE35">即刻 · 李贝拉Bela</a></strong><br />
+      <sub>点击主页或扫码关注</sub><br /><br />
+      <a href="https://m.okjike.com/users/FBA3136A-3617-4298-BB69-5F24833BEE35"><img src="assets/accounts/jike.png" alt="李贝拉Bela的即刻二维码" width="200" /></a>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" colspan="2">
+      <strong><a href="https://github.com/belalee-ai">GitHub · belalee-ai</a></strong><br />
+      <sub>开源项目持续更新</sub><br /><br />
+      <a href="https://github.com/belalee-ai"><img src="assets/accounts/github.png" alt="GitHub 主页二维码：belalee-ai" width="200" /></a>
+    </td>
+  </tr>
+</table>
+<!-- ACCOUNTS-END -->
 
-**公众号「花叔」**：用微信扫码，或在微信搜一搜「花叔」。
+---
 
-[B站：花叔v](https://space.bilibili.com/14097567) · [小红书：花叔](https://www.xiaohongshu.com/user/profile/5abc6f17e8ac2b109179dfdf)
-
-手机上不方便扫码，可以直接点上面的平台链接；[打开二维码大图](assets/follow.svg)。
-
-[个人网站](https://www.huasheng.ai/) · [X](https://x.com/AlchainHust) · [YouTube](https://www.youtube.com/@Alchain) · [更多开源项目](https://github.com/alchaincyf?tab=repositories)
-
-合作联系：alchaincyf3@gmail.com
+[更多开源项目 →](https://github.com/belalee-ai?tab=repositories)
