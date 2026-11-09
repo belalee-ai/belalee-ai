@@ -7,18 +7,23 @@
 | 文件或目录 | 用途 |
 | --- | --- |
 | `README.md` | 主页文案、项目顺序、图片引用和所有可点击链接 |
-| `assets/hero.svg` | 顶部个人横幅占位 |
+| `assets/hero.webp` | 顶部 BELA 个人封面（来自自己的 Drive 物料） |
 | `assets/latest.svg` | 近期项目封面占位 |
 | `assets/project-01.svg` 至 `project-03.svg` | 三个精选项目封面占位 |
 | `assets/tool-01.svg` 至 `tool-03.svg` | 三个工具封面占位 |
 | `assets/learning.svg` | 内容、教程或文章封面占位 |
-| `assets/accounts/` | 各平台二维码与缺失二维码的占位 |
+| `assets/follow.svg` | 玫红色横版二维码长图，主页显示此矢量图 |
+| `assets/follow.png` | 3200 × 1360 高清长图，供下载与分享 |
+| `assets/accounts/banner.json` | Slogan、主题色、四个平台的名称和二维码链接 |
+| `scripts/build_follow_banner.py` | 从配置重新生成矢量长图 |
 | `.github/workflows/update-stats.yml` | 自动刷新主页统计 |
 | `scripts/update_stats.py` | 统计脚本，日常不用修改 |
 
-所有栏目都可以改名、调整顺序、增加或删除。未填的文案目前明确显示为待补充。
+所有栏目都可以改名、调整顺序、增加或删除。未填的项目文案目前明确显示为待补充。个人封面和账号区已填入自己的素材。
 
 ## 换成自己的封面
+
+当前个人封面使用「BELA粉色撕纸时尚封面-1.png」的 WebP 网页版本：1448 × 1086，保留完整构图，由约 2.25 MB 压缩至约 231 KB。Drive 原文件未改动。
 
 1. 将图片上传到 `assets/`。推荐 JPG、PNG 或 WebP，横幅宽约 1600 像素，项目封面比例约 4:1，个人横幅比例约 10:3。
 2. 在 `README.md` 中把对应 `src` 改成实际文件名，例如 `assets/hero.webp`。不要把 JPG 文件直接改名为 `.svg`。
@@ -41,9 +46,25 @@
 
 ## 更新全平台账号
 
-修改 `README.md` 中的 `ACCOUNTS-START` 与 `ACCOUNTS-END` 之间的内容。二维码保存在本仓库中；同时保留文字链接，便于手机读者直接访问。缺失二维码用明确的占位显示，不用其他账号替代。
+主页使用一张长图，固定从左到右排列：**小红书 → 视频号 → 微信号 → 即刻**。Slogan 为「跟你一起慢慢进步」，主题玫红为 `#B64F78`。Twitter / X、GitHub、公众号不在此账号展示区。
 
-视频号保留独立占位。后续将真实二维码放入 `assets/accounts/wechat-channels.png`，再修改 README 对应图片路径、账号名和说明。
+`assets/accounts/banner.json` 保存各平台的二维码原始链接。小红书、微信、即刻均从原二维码解码后重新生成，保持原有目标不变；微信是个人加好友二维码。即刻已重新生成高清矢量二维码，并非放大模糊原图。视频号的 `qr_payload` 暂为 `null`，显示明确的占位，后续替换为真实二维码解码得到的链接。
+
+主页图片为自包含的 SVG，字体已转为路径，二维码以矢量方块绘制，无外链字体和图片依赖。PNG 为 3200 × 1360 像素。不要只修改 PNG，应从配置重新生成两个版本，以保持主页和下载文件一致。
+
+重新生成（macOS，需 Python 3 和 Homebrew）：
+
+```bash
+python3 -m venv .venv
+.venv/bin/pip install -r scripts/requirements-design.txt
+.venv/bin/python scripts/build_follow_banner.py
+# 如果尚未安装：brew install librsvg
+rsvg-convert -w 3200 -h 1360 assets/follow.svg -o assets/follow.png
+```
+
+默认字体为 macOS 的 `Hiragino Sans GB.ttc`。其他系统可传 `--font /path/to/中文字体.ttf`；TTC 文件如需指定字重，可加 `--font-index`。
+
+修改后应解码成品中的三个（或补全后四个）二维码，逐一核对目标链接。README 下方保留小红书、即刻文字链接及微信号，便于手机读者使用。更新账号时也同步更新这些文字。
 
 主页只展示公开账号信息，不包含表格中的绑定手机号、运营商、登录邮箱等管理信息。
 

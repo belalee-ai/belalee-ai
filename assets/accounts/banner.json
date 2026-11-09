@@ -1,0 +1,17 @@
+{
+  "slogan": "跟你一起慢慢进步",
+  "colors": {
+    "background": "#FFF9FC",
+    "border": "#AF577B",
+    "accent": "#B64F78",
+    "text": "#36242D",
+    "muted": "#886777",
+    "qr": "#321722"
+  },
+  "accounts": [
+    {"platform": "小红书", "name": "李贝拉Bela", "caption": "扫码看笔记", "qr_payload": "http://xhslink.com/m/8mYVfzMa1n2"},
+    {"platform": "视频号", "name": "待补充", "caption": "二维码后续提供", "qr_payload": null},
+    {"platform": "微信号", "name": "李贝拉Bela", "caption": "扫码添加朋友", "qr_payload": "https://u.wechat.com/ELrx57MbRsjXrQshCt8Ihn0?s=0"},
+    {"platform": "即刻", "name": "李贝拉Bela", "caption": "扫码来即刻", "qr_payload": "https://okjk.co/Rt5QNz"}
+  ]
+}

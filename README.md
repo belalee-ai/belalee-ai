@@ -1,9 +1,9 @@
 <!-- 首页内容在这个文件中维护；使用方法见 MAINTENANCE.md。 -->
 <!-- 可选：重要项目推广区可放在个人横幅之前。 -->
 
-<img src="assets/hero.svg" alt="Belalee：个人横幅待补充" width="100%" />
+<img src="assets/hero.webp" alt="李贝拉Bela：玫红色 BELA 个人封面" width="100%" />
 
-我是 **Belalee**。个人简介待补充。
+**李贝拉Bela** · 跟你一起慢慢进步
 
 <!-- STATS-START -->
 [![Total Stars](https://img.shields.io/badge/Total%20Stars-6-FFD93D?style=flat&logo=github&logoColor=white)](https://github.com/belalee-ai)
@@ -58,53 +58,13 @@
 ## 在这些平台找到我
 
 <!-- ACCOUNTS-START -->
-点击平台名称打开主页，或扫描二维码找到我。
+<img src="assets/follow.svg" alt="跟你一起慢慢进步：从左到右是小红书、视频号占位、个人微信和即刻二维码" width="100%" />
 
-<table>
-  <tr>
-    <td align="center" valign="top" width="50%">
-      <strong><a href="https://www.xiaohongshu.com/user/profile/6a1f9a8b0000000008009003">小红书 · 李贝拉Bela</a></strong><br />
-      <sub>小红书号：belaleeAI</sub><br /><br />
-      <a href="https://www.xiaohongshu.com/user/profile/6a1f9a8b0000000008009003"><img src="assets/accounts/xiaohongshu.jpg" alt="李贝拉Bela的小红书二维码" width="200" /></a>
-    </td>
-    <td align="center" valign="top" width="50%">
-      <strong>公众号 · 李贝拉Bela</strong><br />
-      <sub>微信搜一搜「李贝拉Bela」</sub><br /><br />
-      <img src="assets/accounts/wechat-official-placeholder.svg" alt="公众号二维码待补充" width="200" />
-    </td>
-  </tr>
-  <tr>
-    <td align="center" valign="top">
-      <strong>视频号</strong><br />
-      <sub>账号及二维码待补充</sub><br /><br />
-      <img src="assets/accounts/wechat-channels-placeholder.svg" alt="视频号二维码占位，后续补充" width="200" />
-    </td>
-    <td align="center" valign="top">
-      <strong>微信 · 李贝拉Bela</strong><br />
-      <sub>微信号：belaleeAI</sub><br /><br />
-      <img src="assets/accounts/wechat-placeholder.svg" alt="主微信二维码待补充" width="200" />
-    </td>
-  </tr>
-  <tr>
-    <td align="center" valign="top">
-      <strong><a href="https://x.com/belalee_ai">X · 李贝拉Bela</a></strong><br />
-      <sub>@belalee_ai</sub><br /><br />
-      <a href="https://x.com/belalee_ai"><img src="assets/accounts/x.png" alt="X 主页二维码：belalee_ai" width="200" /></a>
-    </td>
-    <td align="center" valign="top">
-      <strong><a href="https://m.okjike.com/users/FBA3136A-3617-4298-BB69-5F24833BEE35">即刻 · 李贝拉Bela</a></strong><br />
-      <sub>点击主页或扫码关注</sub><br /><br />
-      <a href="https://m.okjike.com/users/FBA3136A-3617-4298-BB69-5F24833BEE35"><img src="assets/accounts/jike.png" alt="李贝拉Bela的即刻二维码" width="200" /></a>
-    </td>
-  </tr>
-  <tr>
-    <td align="center" colspan="2">
-      <strong><a href="https://github.com/belalee-ai">GitHub · belalee-ai</a></strong><br />
-      <sub>开源项目持续更新</sub><br /><br />
-      <a href="https://github.com/belalee-ai"><img src="assets/accounts/github.png" alt="GitHub 主页二维码：belalee-ai" width="200" /></a>
-    </td>
-  </tr>
-</table>
+[小红书 · 李贝拉Bela](https://www.xiaohongshu.com/user/profile/6a1f9a8b0000000008009003) · [即刻 · 李贝拉Bela](https://m.okjike.com/users/FBA3136A-3617-4298-BB69-5F24833BEE35)
+
+**微信号：belaleeAI**，扫码添加朋友。视频号二维码待补充。
+
+[打开高清二维码长图](assets/follow.png)
 <!-- ACCOUNTS-END -->
 
 ---
