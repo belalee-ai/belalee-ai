@@ -15,13 +15,11 @@
 ## 在这些平台找到我
 
 <!-- ACCOUNTS-START -->
-<img src="assets/follow-y2k-v2.svg" alt="跟你一起慢慢进步：从左到右是小红书、视频号占位、个人微信和即刻二维码" width="100%" />
+<a href="assets/follow-y2k-v2.png" aria-label="打开高清二维码长图"><img src="assets/follow-y2k-v2.svg" alt="跟你一起慢慢进步：从左到右是小红书、视频号占位、个人微信和即刻二维码" width="100%" /></a>
 
 💬 **微信号：belaleeAI**，扫码添加朋友。视频号二维码待补充。
 
 [📕 小红书：李贝拉Bela](https://www.xiaohongshu.com/user/profile/6a1f9a8b0000000008009003) · [⚡ 即刻：李贝拉Bela](https://m.okjike.com/users/FBA3136A-3617-4298-BB69-5F24833BEE35)
-
-📱 手机浏览可直接点击平台链接，也可以[打开高清二维码长图](assets/follow-y2k-v2.png)。
 
 [🐦 X：@belalee_ai](https://x.com/belalee_ai) · [🚀 更多开源项目 →](https://github.com/belalee-ai?tab=repositories)
 <!-- ACCOUNTS-END -->
