@@ -30,11 +30,19 @@
 
 ## Skills
 
+<img src="assets/project-placeholder.svg" alt="Skills项目封面待补充" width="100%" />
+
 ## DSH 插件
+
+<img src="assets/project-placeholder.svg" alt="DSH 插件项目封面待补充" width="100%" />
 
 ## 动效库
 
+<a href="https://github.com/belalee-ai/little-move"><img src="assets/project-placeholder.svg" alt="动效库项目封面待补充" width="100%" /></a>
+
 ## 自动剪辑工作流
+
+<a href="https://github.com/belalee-ai/video-editing-workflow-bundle"><img src="assets/project-placeholder.svg" alt="自动剪辑工作流项目封面待补充" width="100%" /></a>
 
 ## 边做边学
 
