@@ -3,7 +3,14 @@
 
 <img src="assets/hero.webp" alt="李贝拉Bela：玫红色 BELA 个人封面" width="100%" />
 
-**李贝拉Bela** · 跟你一起慢慢进步
+欢迎来到我的 Github，我是 **李贝拉Bela**。
+
+📌 关注：AI & Global Tech & Vibe coding & Agent<br>
+🌏 在做：AI科技自媒体，全网同名<br>
+🌊 持续关注前沿科技！帮助更多人用好AI<br>
+✉️ 合作+V belaleeAI<br>
+📮 [lwh1517880@gmail.com](mailto:lwh1517880@gmail.com)<br>
+🙆‍♀️ 前互联网大厂PM
 
 <!-- STATS-START -->
 [![Total Stars](https://img.shields.io/badge/Total%20Stars-6-FFD93D?style=flat&logo=github&logoColor=white)](https://github.com/belalee-ai)
