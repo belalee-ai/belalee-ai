@@ -3,10 +3,10 @@
 
 <img src="assets/hero-y2k.webp" alt="李贝拉 Bela 的 Y2K 个人网站封面，粉色撕纸拼贴与复古数码贴纸" width="100%" />
 
-## 在这些平台找到我
+## 自媒体账号
 
 <!-- ACCOUNTS-START -->
-<a href="assets/follow-y2k-v2.png" aria-label="打开高清二维码长图"><img src="assets/follow-y2k-v2.svg" alt="跟你一起慢慢进步：从左到右是小红书、视频号占位、个人微信和即刻二维码" width="100%" /></a>
+<a href="assets/follow-y2k-v3.png" aria-label="打开高清二维码长图"><img src="assets/follow-y2k-v3.svg" alt="你能在这些平台找到我：从左到右是小红书、视频号占位、个人微信和即刻二维码" width="100%" /></a>
 
 💬 **微信号：belaleeAI**，扫码添加朋友。视频号二维码待补充。
 

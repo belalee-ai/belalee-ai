@@ -14,16 +14,15 @@ ROOT = Path(__file__).resolve().parent.parent
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--font', default='/System/Library/Fonts/Hiragino Sans GB.ttc',
-                        help='Chinese TTF/OTF/TTC font; glyphs are outlined in SVG')
+    parser.add_argument('--font', required=True,
+                        help='Fusion Pixel 12px proportional Simplified Chinese TTF; glyphs are outlined in SVG')
     parser.add_argument('--font-index', type=int, default=0)
-    parser.add_argument('--title-font', default='/System/Library/Fonts/Supplemental/Songti.ttc',
-                        help='Font for the slogan')
-    parser.add_argument('--title-font-index', type=int, default=1)
     args = parser.parse_args()
     config = json.loads((ROOT / 'assets/accounts/banner.json').read_text())
     font = TTFont(args.font, fontNumber=args.font_index)
-    title_font = TTFont(args.title_font, fontNumber=args.title_font_index)
+    glyphs = font.getGlyphSet()
+    cmap = font.getBestCmap()
+    units = font['head'].unitsPerEm
     colors = config['colors']
     accounts = config['accounts']
     if len(accounts) != 4:
@@ -58,10 +57,8 @@ def main():
             f'transform="rotate({angle} {center_x} {center_y})" href="data:image/png;base64,{sticker}"/>'
         )
 
-    def text(value, center, baseline, size, color, face=font, tracking=0):
-        glyphs = face.getGlyphSet()
-        cmap = face.getBestCmap()
-        scale = size / face['head'].unitsPerEm
+    def text(value, center, baseline, size, color, tracking=0, weight=0):
+        scale = size / units
         names = []
         for ch in value:
             if ord(ch) not in cmap:
@@ -69,7 +66,8 @@ def main():
             names.append(cmap[ord(ch)])
         width = sum(glyphs[name].width for name in names) * scale + tracking * (len(names) - 1)
         x = center - width / 2
-        svg.append(f'<g aria-label="{escape(value)}">')
+        stroke = f' stroke="{color}" stroke-width="{weight / scale:.3f}"' if weight else ""
+        svg.append(f'<g aria-label="{escape(value)}"{stroke}>')
         for name in names:
             pen = SVGPathPen(glyphs)
             glyphs[name].draw(pen)
@@ -79,9 +77,9 @@ def main():
             x += glyphs[name].width * scale + tracking
         svg.append('</g>')
 
-    text("BELA.ZINE / CONTACT", 189, 50, 17, "#8b365c")
-    text("SCAN MODE / ON", 1422, 50, 17, "#8b365c")
-    text(config["slogan"], 800, 157, 78, "#8b2953", face=title_font, tracking=5)
+    text("BELA.ZINE / CONTACT", 189, 50, 20, "#a32962")
+    text("SCAN MODE / ON", 1422, 50, 20, "#a32962")
+    text(config["slogan"], 800, 157, 72, "#35142a", tracking=5, weight=2.4)
     for index, account in enumerate(accounts):
         center = 260 + index * 360
         left, top, side = center - 150, 280, 300
@@ -107,9 +105,9 @@ def main():
             svg.append(f'<rect x="{left+26}" y="{top+26}" width="248" height="248" rx="8" fill="{colors["background"]}" stroke="{colors["border"]}" stroke-opacity="0.35" stroke-width="2" stroke-dasharray="8 8"/>')
             text('二维码待补充', center, top + 161, 27, colors['muted'])
         text(account['name'], center, 630, 29, colors['text'])
-        text(account['caption'], center, 672, 21, colors['muted'])
+        text(account['caption'], center, 672, 24, colors['muted'])
     svg.append('</svg>')
-    output = ROOT / 'assets/follow-y2k-v2.svg'
+    output = ROOT / 'assets/follow-y2k-v3.svg'
     output.write_text('\n'.join(svg) + '\n')
     print(output)
 

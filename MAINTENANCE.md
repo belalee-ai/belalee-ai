@@ -11,8 +11,8 @@
 | `assets/latest.webp` | Y2K 个人简历网站项目封面 |
 | `assets/project-placeholder.svg` | 四个项目分类共用的占位封面 |
 | `assets/learning.svg` | 内容、教程或文章封面占位 |
-| `assets/follow-y2k-v2.svg` | Y2K 粉色网格二维码长图，主页显示此矢量图 |
-| `assets/follow-y2k-v2.png` | 3200 × 1450 高清长图，供下载与分享 |
+| `assets/follow-y2k-v3.svg` | Y2K 粉色网格二维码长图，主页显示此矢量图 |
+| `assets/follow-y2k-v3.png` | 3200 × 1450 高清长图，供下载与分享 |
 | `assets/y2k/` | 二维码横幅使用的软盘和光盘贴纸 |
 | `assets/accounts/banner.json` | Slogan、主题色、四个平台的名称和二维码链接 |
 | `scripts/build_follow_banner.py` | 从配置重新生成矢量长图 |
@@ -46,7 +46,7 @@
 
 ## 更新全平台账号
 
-主页使用一张长图，固定从左到右排列：**小红书 → 视频号 → 微信号 → 即刻**。Slogan 为「跟你一起慢慢进步」，主题玫红为 `#B64F78`。Twitter / X、GitHub、公众号不在此账号展示区。
+主页使用一张长图，固定从左到右排列：**小红书 → 视频号 → 微信号 → 即刻**。Slogan 为「你能在这些平台找到我」，主题玫红为 `#B64F78`。Twitter / X、GitHub、公众号不在此账号展示区。
 
 `assets/accounts/banner.json` 保存各平台的二维码原始链接。小红书、微信、即刻均从原二维码解码后重新生成，保持原有目标不变；微信是个人加好友二维码。即刻已重新生成高清矢量二维码，并非放大模糊原图。视频号的 `qr_payload` 暂为 `null`，显示明确的占位，后续替换为真实二维码解码得到的链接。
 
@@ -57,12 +57,12 @@
 ```bash
 python3 -m venv .venv
 .venv/bin/pip install -r scripts/requirements-design.txt
-.venv/bin/python scripts/build_follow_banner.py
+.venv/bin/python scripts/build_follow_banner.py --font /path/to/fusion-pixel-12px-proportional-zh_hans.ttf
 # 如果尚未安装：brew install librsvg
-rsvg-convert -w 3200 -h 1450 assets/follow-y2k-v2.svg -o assets/follow-y2k-v2.png
+rsvg-convert -w 3200 -h 1450 assets/follow-y2k-v3.svg -o assets/follow-y2k-v3.png
 ```
 
-标签和标语分别使用 macOS 的 `Hiragino Sans GB.ttc` 和 `Songti.ttc`。其他系统可用 `--font` 和 `--title-font` 指定相应字体。TTC 文件的字重分别用 `--font-index` 和 `--title-font-index` 选择。
+横幅统一使用缝合像素 12px 比例版简体中文字体。下载 TTF 压缩包并解压，将对应字体路径传给 `--font`。[字体发布页](https://github.com/TakWolf/fusion-pixel-font/releases/tag/2026.10.25)
 
 修改后应解码成品中的三个（或补全后四个）二维码，逐一核对目标链接。README 的首屏封面下方设有账号区，包含二维码、小红书、即刻、X、更多开源项目链接和微信号。更新账号时同步核对相应链接与文字。
 
