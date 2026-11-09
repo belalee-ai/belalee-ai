@@ -120,7 +120,7 @@ def main():
         text(account['name'], center, 585, 29, colors['text'])
         text(account['caption'], center, 627, 21, colors['muted'])
     svg.append('</svg>')
-    output = ROOT / 'assets/follow.svg'
+    output = ROOT / 'assets/follow-y2k.svg'
     output.write_text('\n'.join(svg) + '\n')
     print(output)
 

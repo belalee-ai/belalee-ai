@@ -7,12 +7,12 @@
 | 文件或目录 | 用途 |
 | --- | --- |
 | `README.md` | 主页文案、项目顺序、图片引用和所有可点击链接 |
-| `assets/hero.webp` | 顶部 Y2K 撕纸封面 |
+| `assets/hero-y2k.webp` | 顶部 Y2K 撕纸封面 |
 | `assets/latest.webp` | Y2K 个人简历网站项目封面 |
 | `assets/project-placeholder.svg` | 四个项目分类共用的占位封面 |
 | `assets/learning.svg` | 内容、教程或文章封面占位 |
-| `assets/follow.svg` | Y2K 电子屏风格二维码长图，主页显示此矢量图 |
-| `assets/follow.png` | 3200 × 1360 高清长图，供下载与分享 |
+| `assets/follow-y2k.svg` | Y2K 电子屏风格二维码长图，主页显示此矢量图 |
+| `assets/follow-y2k.png` | 3200 × 1360 高清长图，供下载与分享 |
 | `assets/y2k/` | 二维码横幅使用的软盘和光盘贴纸 |
 | `assets/accounts/banner.json` | Slogan、主题色、四个平台的名称和二维码链接 |
 | `scripts/build_follow_banner.py` | 从配置重新生成矢量长图 |
@@ -26,7 +26,7 @@
 当前个人封面使用 `proc-2-paper.jpg` 的 800 × 450 WebP 版本。近期项目封面使用 `proc-1-desktop.jpg` 的实景截图。上传前将照片与项目封面压缩为 WebP，保持原始构图。
 
 1. 将图片上传到 `assets/`。推荐 JPG、PNG 或 WebP，横幅宽约 1600 像素，项目封面比例约 4:1，个人横幅比例约 10:3。
-2. 在 `README.md` 中把对应 `src` 改成实际文件名，例如 `assets/hero.webp`。不要把 JPG 文件直接改名为 `.svg`。
+2. 在 `README.md` 中把对应 `src` 改成实际文件名，例如 `assets/hero-y2k.webp`。不要把 JPG 文件直接改名为 `.svg`。
 3. 把 `alt` 改成图片的简短说明。
 4. 把占位介绍改成自己的内容，并添加项目链接。
 
@@ -59,7 +59,7 @@ python3 -m venv .venv
 .venv/bin/pip install -r scripts/requirements-design.txt
 .venv/bin/python scripts/build_follow_banner.py
 # 如果尚未安装：brew install librsvg
-rsvg-convert -w 3200 -h 1360 assets/follow.svg -o assets/follow.png
+rsvg-convert -w 3200 -h 1360 assets/follow-y2k.svg -o assets/follow-y2k.png
 ```
 
 默认字体为 macOS 的 `Hiragino Sans GB.ttc`。其他系统可传 `--font /path/to/中文字体.ttf`；TTC 文件如需指定字重，可加 `--font-index`。
