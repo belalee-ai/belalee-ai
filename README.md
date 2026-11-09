@@ -8,11 +8,13 @@
 <!-- ACCOUNTS-START -->
 <a href="assets/follow-y2k-v3.png" aria-label="打开高清二维码长图"><img src="assets/follow-y2k-v3.svg" alt="你能在这些平台找到我：从左到右是小红书、视频号占位、个人微信和即刻二维码" width="100%" /></a>
 
-💬 **微信号：belaleeAI**，扫码添加朋友。视频号二维码待补充。
-
-[📕 小红书：李贝拉Bela](https://www.xiaohongshu.com/user/profile/6a1f9a8b0000000008009003) · [⚡ 即刻：李贝拉Bela](https://m.okjike.com/users/FBA3136A-3617-4298-BB69-5F24833BEE35)
-
-[🐦 X：@belalee_ai](https://x.com/belalee_ai) · [🚀 更多开源项目 →](https://github.com/belalee-ai?tab=repositories)
+[📕 小红书：李贝拉Bela](https://www.xiaohongshu.com/user/profile/6a1f9a8b0000000008009003)<br>
+📰 公众号：李贝拉Bela（链接待补）<br>
+🎬 视频号：链接待补<br>
+💬 微信号：**belaleeAI**（扫码添加）<br>
+[⚡ 即刻：李贝拉Bela](https://m.okjike.com/users/FBA3136A-3617-4298-BB69-5F24833BEE35)<br>
+[🐦 X：@belalee_ai](https://x.com/belalee_ai)<br>
+[🚀 GitHub：更多开源项目 →](https://github.com/belalee-ai?tab=repositories)
 <!-- ACCOUNTS-END -->
 
 <!-- STATS-START -->

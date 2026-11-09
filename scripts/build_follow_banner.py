@@ -3,6 +3,7 @@
 import argparse
 from base64 import b64encode
 from html import escape
+from itertools import groupby
 import json
 from pathlib import Path
 from fontTools.pens.svgPathPen import SVGPathPen
@@ -96,11 +97,14 @@ def main():
             # Keep an integer module grid, then apply a single vector scale.
             cells = []
             for row, values in enumerate(matrix):
-                for col, dark in enumerate(values):
+                col = 0
+                for dark, run in groupby(values):
+                    length = sum(1 for _ in run)
                     if dark:
-                        cells.append(f'M{col} {row}h1v1h-1z')
+                        cells.append(f'M{col} {row}h{length}v1h-{length}z')
+                    col += length
             scale = 280 / size
-            svg.append(f'<path fill="{colors["qr"]}" shape-rendering="crispEdges" transform="translate({left+10} {top+10}) scale({scale:.8f})" d="{" ".join(cells)}"/>')
+            svg.append(f'<path fill="{colors["qr"]}" shape-rendering="crispEdges" transform="translate({left+10} {top+10}) scale({scale:.8f})" d="{"".join(cells)}"/>')
         else:
             svg.append(f'<rect x="{left+26}" y="{top+26}" width="248" height="248" rx="8" fill="{colors["background"]}" stroke="{colors["border"]}" stroke-opacity="0.35" stroke-width="2" stroke-dasharray="8 8"/>')
             text('二维码待补充', center, top + 161, 27, colors['muted'])
