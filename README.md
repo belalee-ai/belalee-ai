@@ -1,7 +1,7 @@
 <!-- 首页内容在这个文件中维护；使用方法见 MAINTENANCE.md。 -->
 <!-- 可选：重要项目推广区可放在个人横幅之前。 -->
 
-<img src="assets/hero.webp" alt="李贝拉Bela：玫红色 BELA 个人封面" width="100%" />
+<img src="assets/hero.webp" alt="李贝拉 Bela 的 Y2K 个人网站封面，粉色撕纸拼贴与复古数码贴纸" width="100%" />
 
 欢迎来到我的 Github，我是 **李贝拉Bela**。
 
@@ -34,13 +34,13 @@
 
 ## 最近在做
 
-<img src="assets/latest.svg" alt="近期项目封面待补充" width="100%" />
+<a href="https://belalee-website.vercel.app/"><img src="assets/latest.webp" alt="Y2K 风格个人简历网站，右侧展示复古桌面和粉色窗口的真实项目截图" width="100%" /></a>
 
-**近期项目名称待补充**
+**Y2K 风格个人简历网站**
 
-项目介绍待补充。
+我想把简历做成一份可以逛的电子杂志。打开网站，从复古电脑桌面进入，用粉色窗口翻看我的经历、作品和联系方式。现在正在打磨撕纸拼贴、数码贴纸和页面转场，让每个章节都像杂志里的一页。
 
-<!-- 添加链接示例：[查看项目 →](https://github.com/belalee-ai/你的仓库名) -->
+[💿 逛逛我的简历网站 →](https://belalee-website.vercel.app/) · [查看项目源码](https://github.com/belalee-ai/belalee-website)
 
 ## Skills
 

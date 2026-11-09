@@ -7,12 +7,13 @@
 | 文件或目录 | 用途 |
 | --- | --- |
 | `README.md` | 主页文案、项目顺序、图片引用和所有可点击链接 |
-| `assets/hero.webp` | 顶部 BELA 个人封面（来自自己的 Drive 物料） |
-| `assets/latest.svg` | 近期项目封面占位 |
+| `assets/hero.webp` | 顶部 Y2K 撕纸封面 |
+| `assets/latest.webp` | Y2K 个人简历网站项目封面 |
 | `assets/project-placeholder.svg` | 四个项目分类共用的占位封面 |
 | `assets/learning.svg` | 内容、教程或文章封面占位 |
-| `assets/follow.svg` | 玫红色横版二维码长图，主页显示此矢量图 |
+| `assets/follow.svg` | Y2K 电子屏风格二维码长图，主页显示此矢量图 |
 | `assets/follow.png` | 3200 × 1360 高清长图，供下载与分享 |
+| `assets/y2k/` | 二维码横幅使用的软盘和光盘贴纸 |
 | `assets/accounts/banner.json` | Slogan、主题色、四个平台的名称和二维码链接 |
 | `scripts/build_follow_banner.py` | 从配置重新生成矢量长图 |
 | `.github/workflows/update-stats.yml` | 自动刷新主页统计 |
@@ -22,7 +23,7 @@
 
 ## 换成自己的封面
 
-当前个人封面使用「BELA粉色撕纸时尚封面-1.png」的 WebP 网页版本：1448 × 1086，保留完整构图，由约 2.25 MB 压缩至约 231 KB。Drive 原文件未改动。
+当前个人封面使用 `proc-2-paper.jpg` 的 800 × 450 WebP 版本。近期项目封面使用 `proc-1-desktop.jpg` 的实景截图。上传前将照片与项目封面压缩为 WebP，保持原始构图。
 
 1. 将图片上传到 `assets/`。推荐 JPG、PNG 或 WebP，横幅宽约 1600 像素，项目封面比例约 4:1，个人横幅比例约 10:3。
 2. 在 `README.md` 中把对应 `src` 改成实际文件名，例如 `assets/hero.webp`。不要把 JPG 文件直接改名为 `.svg`。
@@ -49,7 +50,7 @@
 
 `assets/accounts/banner.json` 保存各平台的二维码原始链接。小红书、微信、即刻均从原二维码解码后重新生成，保持原有目标不变；微信是个人加好友二维码。即刻已重新生成高清矢量二维码，并非放大模糊原图。视频号的 `qr_payload` 暂为 `null`，显示明确的占位，后续替换为真实二维码解码得到的链接。
 
-主页图片为自包含的 SVG，字体已转为路径，二维码以矢量方块绘制，无外链字体和图片依赖。PNG 为 3200 × 1360 像素。不要只修改 PNG，应从配置重新生成两个版本，以保持主页和下载文件一致。
+主页 SVG 内嵌压缩后的贴纸，文字已转为路径，二维码以矢量方块绘制。更新配置后，先生成 SVG，再导出并压缩 3200 × 1360 的 PNG，保持主页与下载版一致。
 
 重新生成（macOS，需 Python 3 和 Homebrew）：
 
