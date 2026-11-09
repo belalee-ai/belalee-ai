@@ -12,6 +12,20 @@
 📮 [lwh1517880@gmail.com](mailto:lwh1517880@gmail.com)<br>
 🙆‍♀️ 前互联网大厂PM
 
+## 在这些平台找到我
+
+<!-- ACCOUNTS-START -->
+<img src="assets/follow.svg" alt="跟你一起慢慢进步：从左到右是小红书、视频号占位、个人微信和即刻二维码" width="100%" />
+
+💬 **微信号：belaleeAI**，扫码添加朋友。视频号二维码待补充。
+
+[📕 小红书：李贝拉Bela](https://www.xiaohongshu.com/user/profile/6a1f9a8b0000000008009003) · [⚡ 即刻：李贝拉Bela](https://m.okjike.com/users/FBA3136A-3617-4298-BB69-5F24833BEE35)
+
+📱 手机浏览可直接点击平台链接，也可以[打开高清二维码长图](assets/follow.png)。
+
+[🐦 X：@belalee_ai](https://x.com/belalee_ai) · [🚀 更多开源项目 →](https://github.com/belalee-ai?tab=repositories)
+<!-- ACCOUNTS-END -->
+
 <!-- STATS-START -->
 [![Total Stars](https://img.shields.io/badge/Total%20Stars-6-FFD93D?style=flat&logo=github&logoColor=white)](https://github.com/belalee-ai)
 [![Followers](https://img.shields.io/badge/Followers-1-4C8BF5?style=flat&logo=github&logoColor=white)](https://github.com/belalee-ai?tab=followers)
@@ -49,19 +63,3 @@
 <img src="assets/learning.svg" alt="内容与教程封面待补充" width="100%" />
 
 内容介绍与链接待补充。
-
-## 在这些平台找到我
-
-<!-- ACCOUNTS-START -->
-<img src="assets/follow.svg" alt="跟你一起慢慢进步：从左到右是小红书、视频号占位、个人微信和即刻二维码" width="100%" />
-
-[小红书 · 李贝拉Bela](https://www.xiaohongshu.com/user/profile/6a1f9a8b0000000008009003) · [即刻 · 李贝拉Bela](https://m.okjike.com/users/FBA3136A-3617-4298-BB69-5F24833BEE35)
-
-**微信号：belaleeAI**，扫码添加朋友。视频号二维码待补充。
-
-[打开高清二维码长图](assets/follow.png)
-<!-- ACCOUNTS-END -->
-
----
-
-[更多开源项目 →](https://github.com/belalee-ai?tab=repositories)
