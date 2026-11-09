@@ -3,15 +3,6 @@
 
 <img src="assets/hero-y2k.webp" alt="李贝拉 Bela 的 Y2K 个人网站封面，粉色撕纸拼贴与复古数码贴纸" width="100%" />
 
-欢迎来到我的 Github，我是 **李贝拉Bela**。
-
-📌 关注：AI & Global Tech & Vibe coding & Agent<br>
-🌏 在做：AI科技自媒体，全网同名<br>
-🌊 持续关注前沿科技！帮助更多人用好AI<br>
-✉️ 合作+V belaleeAI<br>
-📮 [lwh1517880@gmail.com](mailto:lwh1517880@gmail.com)<br>
-🙆‍♀️ 前互联网大厂PM
-
 ## 在这些平台找到我
 
 <!-- ACCOUNTS-START -->
