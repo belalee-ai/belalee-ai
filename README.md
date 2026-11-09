@@ -28,33 +28,13 @@
 
 <!-- 添加链接示例：[查看项目 →](https://github.com/belalee-ai/你的仓库名) -->
 
-## 从这里开始
+## Skills
 
-<img src="assets/project-01.svg" alt="精选项目 01 封面待补充" width="100%" />
+## DSH 插件
 
-**精选项目 01** · 项目介绍与链接待补充。
+## 动效库
 
-<img src="assets/project-02.svg" alt="精选项目 02 封面待补充" width="100%" />
-
-**精选项目 02** · 项目介绍与链接待补充。
-
-<img src="assets/project-03.svg" alt="精选项目 03 封面待补充" width="100%" />
-
-**精选项目 03** · 项目介绍与链接待补充。
-
-## 给 Agent 配上工具
-
-<img src="assets/tool-01.svg" alt="工具 01 封面待补充" width="100%" />
-
-**工具 01** · 工具介绍与链接待补充。
-
-<img src="assets/tool-02.svg" alt="工具 02 封面待补充" width="100%" />
-
-**工具 02** · 工具介绍与链接待补充。
-
-<img src="assets/tool-03.svg" alt="工具 03 封面待补充" width="100%" />
-
-**工具 03** · 工具介绍与链接待补充。
+## 自动剪辑工作流
 
 ## 边做边学
 

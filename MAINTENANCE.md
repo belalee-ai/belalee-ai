@@ -9,8 +9,6 @@
 | `README.md` | 主页文案、项目顺序、图片引用和所有可点击链接 |
 | `assets/hero.webp` | 顶部 BELA 个人封面（来自自己的 Drive 物料） |
 | `assets/latest.svg` | 近期项目封面占位 |
-| `assets/project-01.svg` 至 `project-03.svg` | 三个精选项目封面占位 |
-| `assets/tool-01.svg` 至 `tool-03.svg` | 三个工具封面占位 |
 | `assets/learning.svg` | 内容、教程或文章封面占位 |
 | `assets/follow.svg` | 玫红色横版二维码长图，主页显示此矢量图 |
 | `assets/follow.png` | 3200 × 1360 高清长图，供下载与分享 |
