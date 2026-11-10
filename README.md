@@ -35,7 +35,11 @@
 
 ## Skills
 
-<img src="assets/project-placeholder.svg" alt="Skills项目封面待补充" width="100%" />
+<a href="https://github.com/belalee-ai/bela-skills"><img src="assets/bela-skills.webp" alt="Bela Skills，李贝拉 Bela 的 Agent 创作工具箱" width="100%" /></a>
+
+把找选题、写口播、剪视频和做视觉这些常用的创作流程，整理成可以在 Agent 里反复用的 Skills。
+
+[💾 查看 Skills 合集与安装方式 →](https://github.com/belalee-ai/bela-skills)
 
 ## DSH 插件
 

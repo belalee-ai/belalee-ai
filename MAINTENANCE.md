@@ -9,7 +9,8 @@
 | `README.md` | 主页文案、项目顺序、图片引用和所有可点击链接 |
 | `assets/hero-y2k.webp` | 顶部 Y2K 撕纸封面 |
 | `assets/latest.webp` | Y2K 个人简历网站项目封面 |
-| `assets/project-placeholder.svg` | 四个项目分类共用的占位封面 |
+| `assets/bela-skills.webp` | Skills 封面，点击进入 Bela Skills 仓库 |
+| `assets/project-placeholder.svg` | DSH 插件、动效库和自动剪辑工作流共用的占位封面 |
 | `assets/learning.svg` | 内容、教程或文章封面占位 |
 | `assets/follow-y2k-v3.svg` | Y2K 粉色网格二维码长图，主页显示此矢量图 |
 | `assets/follow-y2k-v3.png` | 3200 × 1450 高清长图，供下载与分享 |
