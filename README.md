@@ -20,7 +20,7 @@
 <!-- STATS-START -->
 [![Total Stars](https://img.shields.io/badge/Total%20Stars-6-FFD93D?style=flat&logo=github&logoColor=white)](https://github.com/belalee-ai)
 [![Followers](https://img.shields.io/badge/Followers-1-4C8BF5?style=flat&logo=github&logoColor=white)](https://github.com/belalee-ai?tab=followers)
-[![Public Repos](https://img.shields.io/badge/Public%20Repos-10-2EA44F?style=flat&logo=github&logoColor=white)](https://github.com/belalee-ai?tab=repositories)
+[![Public Repos](https://img.shields.io/badge/Public%20Repos-9-2EA44F?style=flat&logo=github&logoColor=white)](https://github.com/belalee-ai?tab=repositories)
 <!-- STATS-END -->
 
 ## 最近在做
